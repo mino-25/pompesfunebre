@@ -13,6 +13,7 @@ export default {
       fontFamily: {
         sans: ['"Open Sans"', 'sans-serif'],
         serif: ['"Merriweather"', 'serif'],
+        body: ['"Cactus Classical Serif"', 'serif'],
       },
     },
   },

@@ -12,7 +12,7 @@ export default function Home() {
       {/* Contenu centré */}
       <div className="relative z-10">
         <h2 className="text-4xl font-bold text-white mb-4">PF du Soleil</h2>
-        <p className="text-gray-200 max-w-xl mx-auto">
+        <p className="font-body text-gray-200 max-w-xl mx-auto">
           Nous vous accompagnons avec dignité et bienveillance dans ces moments difficiles.
         </p>
         <div className="mt-8">
