@@ -12,8 +12,8 @@ export default {
       },
       fontFamily: {
         sans: ['"Open Sans"', 'sans-serif'],
-        body: ['"Merriweather"', 'serif'],
-        serif: ['"Cactus Classical Serif"', 'serif'],
+        body: ['"Lato"', 'serif'],
+        serif: ['"Playfair Display"', 'serif'],
       },
 
        keyframes: {
