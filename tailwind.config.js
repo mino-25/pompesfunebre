@@ -7,8 +7,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#2b2b2b',  // gris foncé
-        accent: '#0c6c36',   // doré doux
+        primary: '#2b2b2b',  
+        accent: '#0c6c36',   
+        third: '#bf121e',
       },
       fontFamily: {
         sans: ['"Open Sans"', 'sans-serif'],
