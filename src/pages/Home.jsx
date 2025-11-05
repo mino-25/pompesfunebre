@@ -24,16 +24,16 @@ export default function Home() {
         transition={{ duration: 1 }}
       >
         <div className="absolute inset-0 bg-black/30 backdrop-blur-[0.5px]" />
-        <div className="relative z-10">
-          <motion.h2
-            className="text-4xl font-serif font-bold text-white mb-4"
+        <div className="relative z-10 flex flex-col items-center gap-6">
+          <motion.h1
+            className="text-5xl font-serif font-bold text-white mb-4"
             variants={fadeInUp}
             initial="hidden"
             animate="visible"
             transition={{ duration: 1, delay: 0.3 }}
           >
             OBSEQUES FRANCE MÉDITERRANÉE
-          </motion.h2>
+          </motion.h1>
           <motion.p
             className="font-body text-gray-200 max-w-2xl mx-auto"
             variants={fadeInUp}
@@ -45,7 +45,7 @@ export default function Home() {
             dignité et bienveillance dans toutes les démarches funéraires, en France et à l’international.
           </motion.p>
           <motion.div
-            className="mt-8"
+            className="mt-8 "
             variants={fadeInUp}
             initial="hidden"
             animate="visible"
@@ -135,7 +135,6 @@ export default function Home() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
-        variants={fadeInUp}
         transition={{ duration: 0.8 }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
@@ -159,7 +158,7 @@ export default function Home() {
       >
         <div className="mb-5"><Phone size={35} /></div>
         <h2 className="text-2xl font-serif mb-4">Besoin d’un accompagnement immédiat ?</h2>
-        <p className="font-body mb-6">Notre équipe est disponible 24h/24 et 7j/7 pour vous aider.</p>
+        <p className="font-body mb-6">Notre équipe est disponible pour vous aider.</p>
         <a
           href="/contact"
           className="px-6 py-3 bg-accent text-white rounded-full hover:bg-white hover:text-primary transition"

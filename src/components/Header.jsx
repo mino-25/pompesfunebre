@@ -15,7 +15,7 @@ export default function Header() {
       </div>
 
       {/* Navigation */}
-      <nav className="flex justify-between items-center px-6 py-3 bg-white/90 backdrop-blur-sm">
+      <nav className="flex justify-between items-center px-10 bg-white/90 backdrop-blur-sm">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           <img src={logo} alt="Logo Pompes Funèbres" className="w-36 md:w-40"/>
