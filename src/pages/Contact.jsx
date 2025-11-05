@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { Mail, MapPin, Phone } from "lucide-react";
 
 export default function Contact() {
@@ -6,6 +7,23 @@ export default function Contact() {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.9 } },
   };
+
+  const [result, setResult] = useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    formData.append("access_key", "32267f6a-be9c-44ec-97d9-7570ae7c2a04");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+    setResult(data.success ? "Success!" : "Error");
+  };
+
 
   return (
     <section className="py-20 bg-gray-50">
@@ -32,6 +50,7 @@ export default function Contact() {
         <div className="grid md:grid-cols-2 gap-12">
           {/* Formulaire */}
           <motion.form
+            onSubmit={onSubmit}
             className="bg-white p-8 rounded-xl shadow-lg flex flex-col gap-4"
             variants={fadeUp}
             initial="hidden"
@@ -39,17 +58,22 @@ export default function Contact() {
             viewport={{ once: true }}
           >
             <input
+              required
               type="text"
+              name="name"
               placeholder="Nom"
               className="p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-third"
             />
             <input
+              required
               type="email"
+              name="email"
               placeholder="Email"
               className="p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-third"
             />
             <textarea
               placeholder="Votre message..."
+              name="message"
               rows="5"
               className="p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-third"
             ></textarea>
@@ -59,6 +83,7 @@ export default function Contact() {
             >
               Envoyer
             </button>
+            <p>{result}</p>
           </motion.form>
 
           {/* Coordonnées */}
@@ -75,7 +100,7 @@ export default function Contact() {
             <ul className="space-y-4 text-gray-700">
               <li className="flex items-center gap-3">
                 <Phone className="text-third" />
-                <span>01 98 73 65 65</span>
+                <span>01 48 50 25 92</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="text-third" />
@@ -83,18 +108,17 @@ export default function Contact() {
               </li>
               <li className="flex items-center gap-3">
                 <MapPin className="text-third" />
-                <span>25 Rue de la Paix, 93000 Bobigny</span>
+                <span>241 Av. de Rosny, 93130 Noisy-le-Sec</span>
               </li>
             </ul>
-
             <div className="mt-8">
-              <iframe
-                title="carte"
+              <iframe 
                 className="w-full h-64 rounded-md shadow"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.336106144051!2d2.439!3d48.910!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66c9c7!2sBobigny!5e0!3m2!1sfr!2sfr!4v0000000000000"
-                allowFullScreen=""
-                loading="lazy"
-              ></iframe>
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2622.625759464906!2d2.467904676021993!3d48.90346899753373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6132fdb1d724f%3A0xe17ab2eb7b4cff7f!2s241%20Av.%20de%20Rosny%2C%2093130%20Noisy-le-Sec!5e0!3m2!1sfr!2sfr!4v1762367320859!5m2!1sfr!2sfr" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
             </div>
           </motion.div>
         </div>

@@ -5,12 +5,11 @@ import logo from "../assets/logo-pf.png"
 
 export default function Header() {
   const [open, setOpen] = useState(false)
-
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-sm shadow-md">
       {/* Bande supérieure */}
       <div className="bg-accent text-white text-sm py-1 px-6 hidden md:flex justify-end gap-8 items-center">
-        <div className="flex items-center gap-2"><Phone size={16}/> 01 98 73 65 65</div>
+        <div className="flex items-center gap-2"><Phone size={16}/> 01 48 50 25 92</div>
         <div className="flex items-center gap-2"><Mail size={16}/> pompefunebre@gmail.com</div>
       </div>
 

@@ -90,7 +90,10 @@ export default function Home() {
             />
             <h3 className="font-serif text-xl text-primary mb-4">Démarches administratives</h3>
             <p className="font-body text-gray-600">
-              Nous vous assistons dans toutes les formalités nécessaires auprès des mairies, hôpitaux et ambassades.
+              Nous vous assistons dans toutes les formalités nécessaires auprès des mairies, hôpitaux et ambassades. <a 
+                href="/services" 
+                className="inline-block font-body text-third hover:underline"
+              > En savoir plus...</a>
             </p>
           </motion.div>
 
@@ -106,7 +109,10 @@ export default function Home() {
             />
             <h3 className="font-serif text-xl text-primary mb-4">Rites funéraires musulmans</h3>
             <p className="font-body text-gray-600">
-              Organisation de la prière mortuaire (Salat al-Janaza) et préparation du défunt selon les traditions islamiques.
+              Organisation de la prière mortuaire (Salat al-Janaza) et préparation du défunt selon les traditions islamiques. <a 
+                href="/services" 
+                className="inline-block font-body text-third hover:underline"
+              > En savoir plus...</a>
             </p>
           </motion.div>
 
@@ -122,7 +128,10 @@ export default function Home() {
             />
             <h3 className="font-serif text-xl text-primary mb-4">Rapatriement à l’étranger</h3>
             <p className="font-body text-gray-600">
-              Nous assurons le rapatriement du corps vers le pays d’origine, en coordination avec les autorités locales et consulaires.
+              Nous assurons le rapatriement du corps vers le pays d’origine, en coordination avec les autorités locales et consulaires. <a 
+                href="/services" 
+                className="inline-block font-body text-third hover:underline"
+              > En savoir plus...</a>
             </p>
           </motion.div>
         </div>
