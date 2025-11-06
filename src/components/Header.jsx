@@ -10,7 +10,7 @@ export default function Header() {
       {/* Bande supérieure */}
       <div className="bg-accent text-white text-sm py-1 px-6 hidden md:flex justify-end gap-8 items-center">
         <div className="flex items-center gap-2"><Phone size={16}/> 01 48 50 25 92</div>
-        <div className="flex items-center gap-2"><Mail size={16}/> pompefunebre@gmail.com</div>
+        <div className="flex items-center gap-2"><Mail size={16}/>agence.france.mediterranee@wanadoo.fr</div>
       </div>
 
       {/* Navigation */}

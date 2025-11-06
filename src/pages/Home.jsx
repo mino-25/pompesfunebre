@@ -17,16 +17,16 @@ export default function Home() {
 
       {/* Hero */}
       <motion.div
-        className="text-center py-40 bg-gray-50 bg-cover bg-center relative"
+        className="relative flex flex-col justify-center items-center text-center h-screen bg-gray-50 bg-cover bg-center"
         style={{ backgroundImage: `url(${masjid})`, backgroundAttachment: "fixed" }}
         initial="hidden"
         animate="visible"
         transition={{ duration: 1 }}
       >
         <div className="absolute inset-0 bg-black/30 backdrop-blur-[0.5px]" />
-        <div className="relative z-10 flex flex-col items-center gap-6">
+        <div className="relative z-10 flex flex-col items-center gap-6 px-4">
           <motion.h1
-            className="text-5xl font-serif font-bold text-white mb-4"
+            className="text-5xl md:text-6xl font-serif font-bold text-white"
             variants={fadeInUp}
             initial="hidden"
             animate="visible"
@@ -34,8 +34,9 @@ export default function Home() {
           >
             OBSEQUES FRANCE MÉDITERRANÉE
           </motion.h1>
+
           <motion.p
-            className="font-body text-gray-200 max-w-2xl mx-auto"
+            className="font-body text-gray-200 max-w-2xl mx-auto text-lg"
             variants={fadeInUp}
             initial="hidden"
             animate="visible"
@@ -44,8 +45,9 @@ export default function Home() {
             Entreprise familiale musulmane, nous accompagnons les familles avec respect,
             dignité et bienveillance dans toutes les démarches funéraires, en France et à l’international.
           </motion.p>
+
           <motion.div
-            className="mt-8 "
+            className="mt-8"
             variants={fadeInUp}
             initial="hidden"
             animate="visible"
@@ -60,6 +62,7 @@ export default function Home() {
           </motion.div>
         </div>
       </motion.div>
+
 
       {/* Notre accompagnement */}
       <motion.section

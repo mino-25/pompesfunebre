@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className="bg-gray-200 text-gray-700 p-4 text-center">
-      &copy; {new Date().getFullYear()} Pompes Funèbres du Soleil. Tous droits réservés.
+      &copy; {new Date().getFullYear()} Obsèques France Méditarrenée. Tous droits réservés.
     </footer>
   )
 }
